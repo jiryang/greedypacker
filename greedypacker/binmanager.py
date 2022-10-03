@@ -117,7 +117,11 @@ class BinManager:
             self.items.append(item)
         if self.sorting:
             self.items_sort()
-
+    
+    # modify to take list as input
+    def add_items(self, items) -> None:
+        if self.sorting:
+            self.items_sort()
 
     def _bin_factory(self) -> Any:
         """
